@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <GraduationCap className="h-8 w-8 text-green-600 dark:text-green-400" />
+              <GraduationCap className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               <span className="text-xl font-bold text-gray-900 dark:text-white">
                 NCCSC
               </span>
@@ -41,8 +41,8 @@ const Navbar = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
                 {item.name}
@@ -85,8 +85,8 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   isActive(item.path)
-                    ? 'text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700'
                 }`}
               >
                 {item.name}

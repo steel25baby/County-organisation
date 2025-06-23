@@ -169,7 +169,7 @@ const JobsPage = () => {
                 placeholder="Search opportunities..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
               />
             </div>
             <div className="relative">
@@ -177,7 +177,7 @@ const JobsPage = () => {
               <select
                 value={selectedType}
                 onChange={(e) => setSelectedType(e.target.value)}
-                className="w-full pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white appearance-none"
+                className="w-full pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white appearance-none"
               >
                 {types.map((type) => (
                   <option key={type.value} value={type.value}>
@@ -191,7 +191,7 @@ const JobsPage = () => {
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white appearance-none"
+                className="w-full pl-10 pr-8 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white appearance-none"
               >
                 {locations.map((location) => (
                   <option key={location.value} value={location.value}>
@@ -213,7 +213,7 @@ const JobsPage = () => {
               {featuredOpportunities.map((opportunity) => (
                 <div
                   key={opportunity.id}
-                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-l-4 border-green-500 p-6 hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border-l-4 border-blue-500 p-6 hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -264,10 +264,10 @@ const JobsPage = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200">
+                    <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200">
                       Apply Now
                     </button>
-                    <button className="flex-1 border border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                    <button className="flex-1 border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                       Learn More
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </button>
@@ -336,10 +336,10 @@ const JobsPage = () => {
                   </div>
                   
                   <div className="mt-4 lg:mt-0 lg:ml-6 flex flex-col sm:flex-row lg:flex-col gap-3 lg:w-48">
-                    <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200">
+                    <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200">
                       Apply Now
                     </button>
-                    <button className="border border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                    <button className="border border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                       Details
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </button>

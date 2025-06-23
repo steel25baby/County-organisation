@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <GraduationCap className="h-8 w-8 text-green-400" />
+              <GraduationCap className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">NCCSC</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -33,7 +33,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -47,15 +47,15 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Mail className="h-4 w-4 text-green-400 flex-shrink-0" />
+                <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">info@nccsc.org</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="h-4 w-4 text-green-400 flex-shrink-0" />
+                <Phone className="h-4 w-4 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">+254 700 123 456</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="h-4 w-4 text-green-400 flex-shrink-0" />
+                <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">Ol Kalou, Nyandarua County</span>
               </div>
             </div>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <a
                   key={label}
                   href={href}
-                  className="text-gray-400 hover:text-green-400 transition-colors duration-200"
+                  className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                   aria-label={label}
                 >
                   <Icon className="h-5 w-5" />
@@ -95,10 +95,10 @@ const Footer = () => {
               © 2024 Nyandarua County College Student Council. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">
+              <Link to="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">
+              <Link to="/terms" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">
                 Terms of Service
               </Link>
             </div>

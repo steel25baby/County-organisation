@@ -161,7 +161,7 @@ const LeadershipPage = () => {
 
         {/* Council Statistics */}
         <section className="mb-16">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 text-white">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4">Our Representation</h2>
               <p className="text-xl opacity-90">
@@ -211,13 +211,13 @@ const LeadershipPage = () => {
                     <img
                       src={leader.image}
                       alt={leader.name}
-                      className="w-24 h-24 rounded-full object-cover border-4 border-green-500"
+                      className="w-24 h-24 rounded-full object-cover border-4 border-blue-500"
                     />
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                         {leader.name}
                       </h3>
-                      <p className="text-green-600 dark:text-green-400 font-semibold text-lg mb-2">
+                      <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-2">
                         {leader.position}
                       </p>
                       <div className="space-y-1 text-sm text-gray-600 dark:text-gray-300 mb-4">
@@ -254,14 +254,14 @@ const LeadershipPage = () => {
                     <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                       <a
                         href={`mailto:${leader.email}`}
-                        className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                        className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                       >
                         <Mail className="h-4 w-4 mr-2" />
                         <span className="text-sm">Email</span>
                       </a>
                       <a
                         href={`tel:${leader.phone}`}
-                        className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                        className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                       >
                         <Phone className="h-4 w-4 mr-2" />
                         <span className="text-sm">Call</span>
@@ -270,7 +270,7 @@ const LeadershipPage = () => {
                         href={leader.social.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                        className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                       >
                         <Linkedin className="h-4 w-4 mr-2" />
                         <span className="text-sm">LinkedIn</span>
@@ -279,7 +279,7 @@ const LeadershipPage = () => {
                         href={leader.social.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                        className="flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                       >
                         <Twitter className="h-4 w-4 mr-2" />
                         <span className="text-sm">Twitter</span>
@@ -312,12 +312,12 @@ const LeadershipPage = () => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-20 h-20 rounded-full object-cover mx-auto mb-4 border-3 border-green-500"
+                  className="w-20 h-20 rounded-full object-cover mx-auto mb-4 border-3 border-blue-500"
                 />
                 <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                   {leader.name}
                 </h3>
-                <p className="text-green-600 dark:text-green-400 font-semibold mb-2">
+                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-2">
                   {leader.position}
                 </p>
                 <div className="text-sm text-gray-600 dark:text-gray-300 mb-3">
@@ -329,7 +329,7 @@ const LeadershipPage = () => {
                 </p>
                 <a
                   href={`mailto:${leader.email}`}
-                  className="flex items-center justify-center text-green-600 hover:text-green-700 transition-colors duration-200"
+                  className="flex items-center justify-center text-blue-600 hover:text-blue-700 transition-colors duration-200"
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   <span className="text-sm">Contact</span>
@@ -351,13 +351,13 @@ const LeadershipPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:info@nccsc.org"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               Express Interest
             </a>
             <a
               href="/contact"
-              className="border-2 border-green-600 text-green-600 hover:bg-green-50 dark:hover:bg-green-900/20 px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               Contact Us
             </a>

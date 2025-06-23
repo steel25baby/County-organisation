@@ -129,7 +129,7 @@ const BlogPage = () => {
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
               />
             </div>
             <div className="flex flex-wrap gap-2">
@@ -139,7 +139,7 @@ const BlogPage = () => {
                   onClick={() => setSelectedCategory(category.value)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                     selectedCategory === category.value
-                      ? 'bg-green-600 text-white'
+                      ? 'bg-blue-600 text-white'
                       : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'
                   }`}
                 >
@@ -165,7 +165,7 @@ const BlogPage = () => {
                 </div>
                 <div className="md:w-1/2 p-8">
                   <div className="flex items-center mb-4">
-                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
                       {featuredPost.category}
                     </span>
                     <span className="text-sm text-gray-500 dark:text-gray-400">Featured</span>
@@ -198,7 +198,7 @@ const BlogPage = () => {
                         {featuredPost.readTime}
                       </div>
                     </div>
-                    <button className="flex items-center text-green-600 hover:text-green-700 font-medium">
+                    <button className="flex items-center text-blue-600 hover:text-blue-700 font-medium">
                       Read More
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </button>
@@ -223,7 +223,7 @@ const BlogPage = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {post.category}
                   </span>
                 </div>
@@ -264,7 +264,7 @@ const BlogPage = () => {
                   </div>
                 </div>
                 
-                <button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                   Read Article
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </button>

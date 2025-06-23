@@ -91,19 +91,19 @@ const PartnershipsPage = () => {
       icon: Briefcase,
       title: "Internship Opportunities",
       description: "Offer internship and job placement opportunities for students in various fields.",
-      color: "bg-green-500"
+      color: "bg-blue-600"
     },
     {
       icon: Target,
       title: "Training & Development",
       description: "Provide skill development workshops, training programs, and professional development.",
-      color: "bg-purple-500"
+      color: "bg-blue-700"
     },
     {
       icon: HandHeart,
       title: "Mentorship Programs",
       description: "Connect experienced professionals with students for guidance and career development.",
-      color: "bg-orange-500"
+      color: "bg-blue-800"
     }
   ];
 
@@ -172,7 +172,7 @@ const PartnershipsPage = () => {
 
         {/* Achievements Section */}
         <section className="mb-16">
-          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 text-white">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold mb-4">Our Partnership Impact</h2>
               <p className="text-xl opacity-90">
@@ -250,7 +250,7 @@ const PartnershipsPage = () => {
                       <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                         {partner.name}
                       </h3>
-                      <p className="text-green-600 dark:text-green-400 font-medium">
+                      <p className="text-blue-600 dark:text-blue-400 font-medium">
                         {partner.type}
                       </p>
                       <span className="inline-block bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300 px-2 py-1 rounded-full text-xs font-medium mt-2">
@@ -270,7 +270,7 @@ const PartnershipsPage = () => {
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-medium text-gray-500 dark:text-gray-400">Impact:</span>
-                      <span className="text-sm text-green-600 dark:text-green-400 font-medium">{partner.impact}</span>
+                      <span className="text-sm text-blue-600 dark:text-blue-400 font-medium">{partner.impact}</span>
                     </div>
                   </div>
                   
@@ -278,7 +278,7 @@ const PartnershipsPage = () => {
                     href={partner.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-green-600 hover:text-green-700 font-medium"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                   >
                     Visit Website
                     <ExternalLink className="h-4 w-4 ml-1" />
@@ -310,7 +310,7 @@ const PartnershipsPage = () => {
                     <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                       {partner.name}
                     </h3>
-                    <p className="text-sm text-green-600 dark:text-green-400">
+                    <p className="text-sm text-blue-600 dark:text-blue-400">
                       {partner.type}
                     </p>
                   </div>
@@ -328,7 +328,7 @@ const PartnershipsPage = () => {
                   href={partner.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-green-600 hover:text-green-700 text-sm font-medium"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
                 >
                   Learn More
                   <ExternalLink className="h-3 w-3 ml-1" />
@@ -362,7 +362,7 @@ const PartnershipsPage = () => {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
 
@@ -377,7 +377,7 @@ const PartnershipsPage = () => {
                   required
                   value={formData.organization}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
 
@@ -392,7 +392,7 @@ const PartnershipsPage = () => {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
 
@@ -406,7 +406,7 @@ const PartnershipsPage = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
 
@@ -420,7 +420,7 @@ const PartnershipsPage = () => {
                   required
                   value={formData.partnershipType}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="">Select Partnership Type</option>
                   <option value="scholarship">Scholarship Programs</option>
@@ -444,14 +444,14 @@ const PartnershipsPage = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your organization and how you'd like to partner with us..."
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 ></textarea>
               </div>
 
               <div className="md:col-span-2">
                 <button
                   type="submit"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
                 >
                   Submit Partnership Inquiry
                   <ArrowRight className="h-5 w-5 ml-2" />
@@ -462,11 +462,11 @@ const PartnershipsPage = () => {
             <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
                 <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 text-green-600 mr-2" />
+                  <Mail className="h-5 w-5 text-blue-600 mr-2" />
                   <span className="text-gray-600 dark:text-gray-300">partnerships@nccsc.org</span>
                 </div>
                 <div className="flex items-center justify-center">
-                  <Phone className="h-5 w-5 text-green-600 mr-2" />
+                  <Phone className="h-5 w-5 text-blue-600 mr-2" />
                   <span className="text-gray-600 dark:text-gray-300">+254 700 123 456</span>
                 </div>
               </div>

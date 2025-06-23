@@ -126,8 +126,8 @@ const ContactPage = () => {
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
-                    <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-lg">
-                      <info.icon className="h-6 w-6 text-green-600 dark:text-green-400" />
+                    <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-lg">
+                      <info.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
@@ -155,14 +155,14 @@ const ContactPage = () => {
               <div className="space-y-4">
                 {quickContacts.map((contact, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <contact.icon className="h-5 w-5 text-green-600 dark:text-green-400 mt-1" />
+                    <contact.icon className="h-5 w-5 text-blue-600 dark:text-blue-400 mt-1" />
                     <div>
                       <p className="font-medium text-gray-900 dark:text-white text-sm">
                         {contact.title}
                       </p>
                       <a
                         href={`mailto:${contact.contact}`}
-                        className="text-green-600 dark:text-green-400 text-sm hover:underline"
+                        className="text-blue-600 dark:text-blue-400 text-sm hover:underline"
                       >
                         {contact.contact}
                       </a>
@@ -229,7 +229,7 @@ const ContactPage = () => {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -245,7 +245,7 @@ const ContactPage = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -262,7 +262,7 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
                       placeholder="Enter your phone number"
                     />
                   </div>
@@ -277,7 +277,7 @@ const ContactPage = () => {
                       required
                       value={formData.category}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
                     >
                       {categories.map((category) => (
                         <option key={category.value} value={category.value}>
@@ -299,7 +299,7 @@ const ContactPage = () => {
                     required
                     value={formData.subject}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200"
                     placeholder="Enter the subject of your message"
                   />
                 </div>
@@ -315,7 +315,7 @@ const ContactPage = () => {
                     required
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200 resize-none"
                     placeholder="Enter your message here..."
                   ></textarea>
                 </div>
@@ -323,7 +323,7 @@ const ContactPage = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
+                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

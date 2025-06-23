@@ -64,21 +64,21 @@ const HomePage = () => {
       description: "Internships, scholarships, and career opportunities",
       icon: Briefcase,
       path: "/jobs",
-      color: "bg-green-500"
+      color: "bg-blue-600"
     },
     {
       title: "Blog",
       description: "Student stories, tips, and council updates",
       icon: BookOpen,
       path: "/blog",
-      color: "bg-purple-500"
+      color: "bg-blue-700"
     },
     {
       title: "Leadership",
       description: "Meet your student council representatives",
       icon: Users,
       path: "/leadership",
-      color: "bg-orange-500"
+      color: "bg-blue-800"
     }
   ];
 
@@ -122,7 +122,7 @@ const HomePage = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
               {heroSlides[currentSlide].title}
             </h1>
-            <h2 className="text-2xl md:text-3xl mb-4 text-green-400 font-semibold">
+            <h2 className="text-2xl md:text-3xl mb-4 text-blue-400 font-semibold">
               {heroSlides[currentSlide].subtitle}
             </h2>
             <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
@@ -130,7 +130,7 @@ const HomePage = () => {
             </p>
             <Link
               to="/contact"
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               {heroSlides[currentSlide].cta}
             </Link>
@@ -140,13 +140,13 @@ const HomePage = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-green-400 transition-colors duration-200"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-400 transition-colors duration-200"
         >
           <ChevronLeft className="h-12 w-12" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-green-400 transition-colors duration-200"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-blue-400 transition-colors duration-200"
         >
           <ChevronRight className="h-12 w-12" />
         </button>
@@ -158,7 +158,7 @@ const HomePage = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-green-400' : 'bg-white bg-opacity-50'
+                index === currentSlide ? 'bg-blue-400' : 'bg-white bg-opacity-50'
               }`}
             />
           ))}
@@ -240,7 +240,7 @@ const HomePage = () => {
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentTestimonial ? 'bg-green-600' : 'bg-gray-300 dark:bg-gray-600'
+                    index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300 dark:bg-gray-600'
                   }`}
                 />
               ))}
@@ -250,25 +250,25 @@ const HomePage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-green-600 dark:bg-green-700">
+      <section className="py-20 bg-blue-600 dark:bg-blue-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
             Ready to Join Our Community?
           </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Connect with fellow Nyandarua students, access exclusive opportunities, 
             and be part of a movement that's transforming our community's future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Get Started
             </Link>
             <Link
               to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
             >
               Learn More
             </Link>
