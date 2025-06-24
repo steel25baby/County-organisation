@@ -13,7 +13,7 @@ const EventsPage = () => {
       time: "10:00 AM",
       location: "Ol Kalou Technical Institute",
       category: "meeting",
-      description: "Join us for our annual meeting to discuss achievements, challenges, and future plans.",
+      description: "Join us for our annual meeting to discuss achievements, challenges, and future plans for NCTSA.",
       attendees: 150,
       image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
       status: "upcoming"

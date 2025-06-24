@@ -16,9 +16,9 @@ const PartnershipsPage = () => {
       id: 1,
       name: "Equity Bank Foundation",
       logo: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop",
-      description: "Providing scholarship opportunities and financial literacy training for students from Nyandarua County.",
+      description: "Providing bursary opportunities and financial literacy training for students from Nyandarua County.",
       type: "Financial Services",
-      partnership: "Scholarship Program",
+      partnership: "Bursary Program",
       impact: "150+ students supported",
       website: "https://equitybank.co.ke",
       featured: true
@@ -83,8 +83,8 @@ const PartnershipsPage = () => {
   const partnershipTypes = [
     {
       icon: Award,
-      title: "Scholarship Programs",
-      description: "Partner with us to provide educational scholarships and financial aid to deserving students.",
+      title: "Bursary Programs",
+      description: "Partner with us to provide educational bursaries and financial aid to deserving students.",
       color: "bg-blue-500"
     },
     {
@@ -121,7 +121,7 @@ const PartnershipsPage = () => {
     {
       number: "KES 10M+",
       label: "Value Created",
-      description: "In scholarships and opportunities"
+      description: "In bursaries and opportunities"
     },
     {
       number: "150+",
@@ -165,7 +165,7 @@ const PartnershipsPage = () => {
             Partnerships & Sponsorships
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Together, we're building a stronger future for Nyandarua County students. 
+            Together, we're building a stronger future for Nyandarua County tertiary students. 
             Join us in creating opportunities that transform lives and communities.
           </p>
         </div>
@@ -423,7 +423,7 @@ const PartnershipsPage = () => {
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 >
                   <option value="">Select Partnership Type</option>
-                  <option value="scholarship">Scholarship Programs</option>
+                  <option value="bursary">Bursary Programs</option>
                   <option value="internship">Internship Opportunities</option>
                   <option value="training">Training & Development</option>
                   <option value="mentorship">Mentorship Programs</option>
@@ -463,7 +463,7 @@ const PartnershipsPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
                 <div className="flex items-center justify-center">
                   <Mail className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-gray-600 dark:text-gray-300">partnerships@nccsc.org</span>
+                  <span className="text-gray-600 dark:text-gray-300">partnerships@nctsa.org</span>
                 </div>
                 <div className="flex items-center justify-center">
                   <Phone className="h-5 w-5 text-blue-600 mr-2" />

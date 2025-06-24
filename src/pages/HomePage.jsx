@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Briefcase, BookOpen, Users, ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import { Calendar, Briefcase, BookOpen, Users, ChevronLeft, ChevronRight, Star, Eye, Target, Zap } from 'lucide-react';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,23 +8,23 @@ const HomePage = () => {
 
   const heroSlides = [
     {
-      title: "Welcome to NCCSC",
-      subtitle: "Empowering Nyandarua Students",
-      description: "Join a community of ambitious students from Nyandarua County. Access opportunities, events, and resources to advance your academic and career journey.",
+      title: "Welcome to NCTSA",
+      subtitle: "Nyandarua County Tertiary Students Association",
+      description: "Join a community of ambitious tertiary students from Nyandarua County. Access bursaries, mentorship programs, and internship opportunities to advance your academic journey.",
       cta: "Join Our Community",
       image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
     },
     {
       title: "Latest Opportunities",
-      subtitle: "Internships & Scholarships Available",
-      description: "Discover exclusive internship opportunities and scholarship programs designed specifically for Nyandarua County students.",
+      subtitle: "Bursaries & Internships Available",
+      description: "Discover exclusive bursary opportunities and internship programs designed specifically for Nyandarua County tertiary students.",
       cta: "View Opportunities",
       image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
     },
     {
       title: "Upcoming Events",
-      subtitle: "Leadership Training & Networking",
-      description: "Participate in leadership development programs, networking events, and skill-building workshops throughout the year.",
+      subtitle: "Mentorship & Networking",
+      description: "Participate in mentorship programs, networking events, and skill-building workshops throughout the year.",
       cta: "See Events",
       image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
     }
@@ -34,19 +34,19 @@ const HomePage = () => {
     {
       name: "Sarah Wanjiku",
       role: "Computer Science Student, University of Nairobi",
-      content: "NCCSC connected me with an amazing internship opportunity at a tech startup. The mentorship and guidance I received was invaluable for my career growth.",
+      content: "NCTSA connected me with an amazing internship opportunity at a tech startup. The mentorship and guidance I received was invaluable for my career growth.",
       rating: 5
     },
     {
       name: "John Kamau",
       role: "Business Administration, Kenyatta University",
-      content: "Through NCCSC, I found my passion for entrepreneurship. The networking events and leadership training shaped my business mindset completely.",
+      content: "Through NCTSA, I found my passion for entrepreneurship. The networking events and leadership training shaped my business mindset completely.",
       rating: 5
     },
     {
       name: "Grace Nyambura",
       role: "Medical Student, University of Nairobi",
-      content: "The scholarship I received through NCCSC enabled me to pursue my dream of becoming a doctor. Forever grateful for this amazing community.",
+      content: "The bursary I received through NCTSA enabled me to pursue my dream of becoming a doctor. Forever grateful for this amazing community.",
       rating: 5
     }
   ];
@@ -61,24 +61,42 @@ const HomePage = () => {
     },
     {
       title: "Jobs & Opportunities",
-      description: "Internships, scholarships, and career opportunities",
+      description: "Internships, bursaries, and career opportunities",
       icon: Briefcase,
       path: "/jobs",
       color: "bg-blue-600"
     },
     {
       title: "Blog",
-      description: "Student stories, tips, and council updates",
+      description: "Student stories, tips, and association updates",
       icon: BookOpen,
       path: "/blog",
       color: "bg-blue-700"
     },
     {
       title: "Leadership",
-      description: "Meet your student council representatives",
+      description: "Meet your student association representatives",
       icon: Users,
       path: "/leadership",
       color: "bg-blue-800"
+    }
+  ];
+
+  const mottoValues = [
+    {
+      icon: Zap,
+      title: "INSPIRE",
+      description: "Igniting passion and motivation in students to pursue excellence"
+    },
+    {
+      icon: Target,
+      title: "ASPIRE",
+      description: "Encouraging ambitious goals and continuous growth"
+    },
+    {
+      icon: Eye,
+      title: "EMPOWER",
+      description: "Providing tools and opportunities for student success"
     }
   ];
 
@@ -165,8 +183,42 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Quick Links */}
+      {/* Mission & Motto Section */}
       <section className="py-20 bg-white dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              Our Mission
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed italic">
+              "To ease the academic lives of Nyandarua County Tertiary students by enabling access to bursaries, 
+              mentorship programs and internship opportunities while promoting educational excellence."
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {mottoValues.map((value, index) => (
+              <div
+                key={index}
+                className="text-center bg-gray-50 dark:bg-gray-700 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300"
+              >
+                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  {value.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {value.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -182,7 +234,7 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={link.path}
-                className="group bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
+                className="group bg-white dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className={`w-12 h-12 ${link.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <link.icon className="h-6 w-6 text-white" />
@@ -200,7 +252,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -212,7 +264,7 @@ const HomePage = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl shadow-xl p-8 md:p-12">
               <div className="text-center">
                 <div className="flex justify-center mb-6">
                   {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
@@ -256,7 +308,7 @@ const HomePage = () => {
             Ready to Join Our Community?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Connect with fellow Nyandarua students, access exclusive opportunities, 
+            Connect with fellow Nyandarua tertiary students, access exclusive opportunities, 
             and be part of a movement that's transforming our community's future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -24,13 +24,13 @@ const JobsPage = () => {
     },
     {
       id: 2,
-      title: "Equity Bank Scholarship Program",
+      title: "Equity Bank Bursary Program",
       company: "Equity Bank Foundation",
       location: "Kenya",
-      type: "scholarship",
+      type: "bursary",
       duration: "Full academic year",
       salary: "KES 150,000",
-      description: "Full scholarship covering tuition fees, accommodation, and living expenses for outstanding students from Nyandarua County.",
+      description: "Full bursary covering tuition fees, accommodation, and living expenses for outstanding students from Nyandarua County.",
       requirements: ["GPA of 3.5 or above", "Demonstrate financial need", "Community involvement"],
       deadline: "2024-03-01",
       posted: "2024-01-15",
@@ -102,7 +102,7 @@ const JobsPage = () => {
   const types = [
     { value: 'all', label: 'All Opportunities' },
     { value: 'internship', label: 'Internships' },
-    { value: 'scholarship', label: 'Scholarships' },
+    { value: 'bursary', label: 'Bursaries' },
     { value: 'part-time', label: 'Part-time Jobs' },
     { value: 'mentorship', label: 'Mentorship' }
   ];
@@ -138,7 +138,7 @@ const JobsPage = () => {
   const getTypeColor = (type) => {
     const colors = {
       internship: 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300',
-      scholarship: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
+      bursary: 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300',
       'part-time': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300',
       mentorship: 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-300'
     };
@@ -154,8 +154,8 @@ const JobsPage = () => {
             Jobs & Opportunities
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Discover internships, scholarships, part-time jobs, and mentorship programs 
-            specifically curated for Nyandarua County students.
+            Discover internships, bursaries, part-time jobs, and mentorship programs 
+            specifically curated for Nyandarua County tertiary students.
           </p>
         </div>
 

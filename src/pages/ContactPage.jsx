@@ -17,7 +17,7 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email Address",
-      details: ["info@nccsc.org", "president@nccsc.org"],
+      details: ["info@nctsa.org", "president@nctsa.org"],
       description: "Send us an email anytime"
     },
     {
@@ -44,19 +44,19 @@ const ContactPage = () => {
     {
       icon: MessageCircle,
       title: "General Inquiries",
-      contact: "info@nccsc.org",
+      contact: "info@nctsa.org",
       description: "For general questions and information"
     },
     {
       icon: Users,
       title: "Membership",
-      contact: "membership@nccsc.org",
+      contact: "membership@nctsa.org",
       description: "Join our student community"
     },
     {
       icon: Calendar,
       title: "Events",
-      contact: "events@nccsc.org",
+      contact: "events@nctsa.org",
       description: "Event registration and information"
     }
   ];
@@ -66,7 +66,7 @@ const ContactPage = () => {
     { value: 'general', label: 'General Inquiry' },
     { value: 'membership', label: 'Membership' },
     { value: 'events', label: 'Events' },
-    { value: 'opportunities', label: 'Job/Scholarship Opportunities' },
+    { value: 'opportunities', label: 'Bursary/Internship Opportunities' },
     { value: 'partnership', label: 'Partnership/Sponsorship' },
     { value: 'complaint', label: 'Complaint/Feedback' },
     { value: 'other', label: 'Other' }

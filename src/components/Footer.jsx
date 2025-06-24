@@ -11,12 +11,18 @@ const Footer = () => {
           <div className="col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <GraduationCap className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">NCCSC</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold">NCTSA</span>
+                <span className="text-sm text-gray-300">Nyandarua County</span>
+              </div>
             </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Empowering and uniting college students from Nyandarua County, creating opportunities 
-              and building a stronger community for all.
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+              Nyandarua County Tertiary Students Association - Creating lasting memories 
+              and empowering students through education, mentorship, and opportunities.
             </p>
+            <div className="text-blue-400 font-semibold text-sm">
+              INSPIRE. ASPIRE. EMPOWER.
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -48,7 +54,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">info@nccsc.org</span>
+                <span className="text-gray-300 text-sm">info@nctsa.org</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-blue-400 flex-shrink-0" />
@@ -69,7 +75,7 @@ const Footer = () => {
                 { icon: Facebook, href: '#', label: 'Facebook' },
                 { icon: Twitter, href: '#', label: 'Twitter' },
                 { icon: Instagram, href: '#', label: 'Instagram' },
-                { icon: Mail, href: 'mailto:info@nccsc.org', label: 'Email' },
+                { icon: Mail, href: 'mailto:info@nctsa.org', label: 'Email' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -92,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2024 Nyandarua County College Student Council. All rights reserved.
+              © 2024 Nyandarua County Tertiary Students Association (NCTSA). All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-200">

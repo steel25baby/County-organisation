@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
 import EventsPage from './pages/EventsPage';
 import BlogPage from './pages/BlogPage';
 import JobsPage from './pages/JobsPage';
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
             <Route path="events" element={<EventsPage />} />
             <Route path="blog" element={<BlogPage />} />
             <Route path="jobs" element={<JobsPage />} />

@@ -11,8 +11,8 @@ const LeadershipPage = () => {
       course: "Computer Science",
       year: "4th Year",
       bio: "Passionate about technology and youth empowerment. Leading initiatives to bridge the digital divide in Nyandarua County.",
-      vision: "To create a platform where every student from Nyandarua can access opportunities regardless of their background.",
-      email: "president@nccsc.org",
+      vision: "To create a platform where every tertiary student from Nyandarua can access opportunities regardless of their background.",
+      email: "president@nctsa.org",
       phone: "+254 712 345 678",
       image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       achievements: ["Dean's List 2022-2023", "Google Developer Student Club Lead", "Published researcher"],
@@ -30,7 +30,7 @@ const LeadershipPage = () => {
       year: "3rd Year",
       bio: "Entrepreneur and business strategist with a passion for community development and sustainable growth.",
       vision: "Building partnerships that create lasting impact for current and future generations of Nyandarua students.",
-      email: "vp@nccsc.org",
+      email: "vp@nctsa.org",
       phone: "+254 723 456 789",
       image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       achievements: ["Young Entrepreneur Award 2023", "Business Plan Competition Winner", "Volunteer of the Year"],
@@ -47,8 +47,8 @@ const LeadershipPage = () => {
       course: "Medicine",
       year: "5th Year",
       bio: "Medical student with a heart for community health and education. Passionate about improving healthcare access in rural areas.",
-      vision: "Ensuring transparent communication and efficient coordination of all council activities and programs.",
-      email: "secretary@nccsc.org",
+      vision: "Ensuring transparent communication and efficient coordination of all association activities and programs.",
+      email: "secretary@nctsa.org",
       phone: "+254 734 567 890",
       image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       achievements: ["Medical Student Association President", "Community Health Champion", "Research Excellence Award"],
@@ -66,7 +66,7 @@ const LeadershipPage = () => {
       year: "4th Year",
       bio: "Finance enthusiast with expertise in financial planning and resource management. Committed to transparent financial stewardship.",
       vision: "Ensuring responsible financial management and creating sustainable funding for student programs and initiatives.",
-      email: "treasurer@nccsc.org",
+      email: "treasurer@nctsa.org",
       phone: "+254 745 678 901",
       image: "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       achievements: ["CPA Finalist", "Finance Club President", "Scholarship Recipient"],
@@ -86,7 +86,7 @@ const LeadershipPage = () => {
       course: "Education",
       year: "3rd Year",
       bio: "Dedicated to improving educational outcomes and academic support systems for all students.",
-      email: "academics@nccsc.org",
+      email: "academics@nctsa.org",
       image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
     },
     {
@@ -97,7 +97,7 @@ const LeadershipPage = () => {
       course: "Sports Science",
       year: "2nd Year",
       bio: "Former county athlete promoting sports excellence and recreational activities among students.",
-      email: "sports@nccsc.org",
+      email: "sports@nctsa.org",
       image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
     },
     {
@@ -108,7 +108,7 @@ const LeadershipPage = () => {
       course: "Social Work",
       year: "4th Year",
       bio: "Passionate about student welfare and mental health support services.",
-      email: "welfare@nccsc.org",
+      email: "welfare@nctsa.org",
       image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
     },
     {
@@ -119,12 +119,12 @@ const LeadershipPage = () => {
       course: "Journalism",
       year: "3rd Year",
       bio: "Communication expert focused on building strong relationships with media and stakeholders.",
-      email: "pr@nccsc.org",
+      email: "pr@nctsa.org",
       image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
     }
   ];
 
-  const councilStats = [
+  const associationStats = [
     {
       icon: Users,
       number: "2,500+",
@@ -155,11 +155,11 @@ const LeadershipPage = () => {
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Meet the dedicated student leaders working tirelessly to represent and serve 
-            the interests of Nyandarua County students across various institutions.
+            the interests of Nyandarua County tertiary students across various institutions.
           </p>
         </div>
 
-        {/* Council Statistics */}
+        {/* Association Statistics */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 text-white">
             <div className="text-center mb-8">
@@ -169,7 +169,7 @@ const LeadershipPage = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {councilStats.map((stat, index) => (
+              {associationStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     <stat.icon className="h-12 w-12" />
@@ -350,7 +350,7 @@ const LeadershipPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:info@nccsc.org"
+              href="mailto:info@nctsa.org"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
             >
               Express Interest

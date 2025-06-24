@@ -8,7 +8,7 @@ const BlogPage = () => {
   const blogPosts = [
     {
       id: 1,
-      title: "10 Essential Skills Every Nyandarua Student Should Develop",
+      title: "10 Essential Skills Every Nyandarua Tertiary Student Should Develop",
       excerpt: "Discover the key skills that will set you apart in today's competitive job market and how to develop them during your college years.",
       content: "In today's rapidly evolving job market, success requires more than just academic excellence...",
       author: "Sarah Wanjiku",
@@ -22,15 +22,15 @@ const BlogPage = () => {
     },
     {
       id: 2,
-      title: "Scholarship Opportunities for Nyandarua Students in 2024",
-      excerpt: "A comprehensive guide to available scholarships, grants, and financial aid specifically for students from Nyandarua County.",
-      content: "Financial constraints shouldn't limit your educational dreams. Here's a detailed look at scholarship opportunities...",
+      title: "Bursary Opportunities for Nyandarua Students in 2024",
+      excerpt: "A comprehensive guide to available bursaries, grants, and financial aid specifically for students from Nyandarua County.",
+      content: "Financial constraints shouldn't limit your educational dreams. Here's a detailed look at bursary opportunities...",
       author: "John Kamau",
       authorRole: "Academic Coordinator",
       date: "2024-02-15",
       readTime: "12 min read",
       category: "Opportunities",
-      tags: ["Scholarships", "Financial Aid", "Education"],
+      tags: ["Bursaries", "Financial Aid", "Education"],
       image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop",
       featured: false
     },
@@ -114,7 +114,7 @@ const BlogPage = () => {
             Student Blog
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Stories, insights, and resources from the Nyandarua County College Student Community. 
+            Stories, insights, and resources from the Nyandarua County Tertiary Students Community. 
             Learn, grow, and connect through shared experiences.
           </p>
         </div>
