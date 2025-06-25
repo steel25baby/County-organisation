@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Briefcase, BookOpen, Users, ChevronLeft, ChevronRight, Star, Eye, Target, Zap } from 'lucide-react';
+import { Calendar, Briefcase, BookOpen, Users, ChevronLeft, ChevronRight, Star, Eye, Target, Zap, LogIn, UserPlus } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const { isAuthenticated, user } = useAuth();
 
   const heroSlides = [
     {
@@ -146,12 +148,38 @@ const HomePage = () => {
             <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
               {heroSlides[currentSlide].description}
             </p>
-            <Link
-              to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              {heroSlides[currentSlide].cta}
-            </Link>
+            
+            {/* Authentication Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              {isAuthenticated ? (
+                <div className="text-center">
+                  <p className="text-lg mb-4">Welcome back, {user?.name}!</p>
+                  <Link
+                    to="/jobs"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    Explore Opportunities
+                  </Link>
+                </div>
+              ) : (
+                <>
+                  <Link
+                    to="/signup"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                  >
+                    <UserPlus className="h-5 w-5 mr-2" />
+                    Join NCTSA
+                  </Link>
+                  <Link
+                    to="/login"
+                    className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                  >
+                    <LogIn className="h-5 w-5 mr-2" />
+                    Login
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
         </div>
 
@@ -312,18 +340,29 @@ const HomePage = () => {
             and be part of a movement that's transforming our community's future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
-            >
-              Get Started
-            </Link>
-            <Link
-              to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Learn More
-            </Link>
+            {isAuthenticated ? (
+              <Link
+                to="/jobs"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Explore Opportunities
+              </Link>
+            ) : (
+              <>
+                <Link
+                  to="/signup"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  to="/about"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Learn More
+                </Link>
+              </>
+            )}
           </div>
         </div>
       </section>
