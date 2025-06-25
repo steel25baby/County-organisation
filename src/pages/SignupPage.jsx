@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Mail, Lock, Eye, EyeOff, GraduationCap, BookOpen, IdCard, UserPlus } from 'lucide-react';
+import { User, Mail, Lock, Eye, EyeOff, GraduationCap, BookOpen, Car as IdCard, UserPlus } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const SignupPage = () => {
