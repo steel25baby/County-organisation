@@ -14,7 +14,7 @@ const HomePage = () => {
       subtitle: "Nyandarua County Tertiary Students Association",
       description: "Join a community of ambitious tertiary students from Nyandarua County. Access bursaries, mentorship programs, and internship opportunities to advance your academic journey.",
       cta: "Join Our Community",
-      image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"
+      image: "https://photos.app.goo.gl/KWdjPH5skfQNmSsT9"
     },
     {
       title: "Latest Opportunities",
