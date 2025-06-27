@@ -5,15 +5,12 @@ const LeadershipPage = () => {
   const executiveCommittee = [
     {
       id: 1,
-      name: "Sarah Wanjiku Mwangi",
+      name: "Geoffrey Ngache",
       position: "President",
-      institution: "University of Nairobi",
-      course: "Computer Science",
-      year: "4th Year",
       bio: "Passionate about technology and youth empowerment. Leading initiatives to bridge the digital divide in Nyandarua County.",
       vision: "To create a platform where every tertiary student from Nyandarua can access opportunities regardless of their background.",
-      email: "president@nctsa.org",
-      phone: "+254 712 345 678",
+      email: "ngachageoffrey@gmail.com",
+      phone: "+254 702381981",
       image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
       achievements: ["Dean's List 2022-2023", "Google Developer Student Club Lead", "Published researcher"],
       social: {
@@ -23,10 +20,10 @@ const LeadershipPage = () => {
     },
     {
       id: 2,
-      name: "John Kamau Njoroge",
+      name: "Margaret Nyambura",
       position: "Vice President",
-      institution: "Kenyatta University",
-      course: "Business Administration",
+      institution: "Laikipia University",
+      course: "Economics and statistics",
       year: "3rd Year",
       bio: "Entrepreneur and business strategist with a passion for community development and sustainable growth.",
       vision: "Building partnerships that create lasting impact for current and future generations of Nyandarua students.",
