@@ -5,8 +5,8 @@ const LeadershipPage = () => {
   const executiveCommittee = [
     {
       id: 1,
-      name: "Geoffrey Ngache",
-      position: "President",
+      name: "Geoffrey Ngacha",
+      position: "Chairman",
       institution: "Laikipia University",
       course: "Computer Science",
       year: "4th Year",
@@ -17,14 +17,14 @@ const LeadershipPage = () => {
       image: "/president.jpg",
       achievements: ["Dean's List 2022-2023", "Google Developer Student Club Lead", "Published researcher"],
       social: {
-        linkedin: "https://linkedin.com/in/geoffrey-ngache",
-        twitter: "https://twitter.com/geoffrey_ngache"
+        linkedin: "https://linkedin.com/in/geoffrey-ngacha",
+        twitter: "https://twitter.com/geoffrey_ngacha"
       }
     },
     {
       id: 2,
       name: "Margaret Nyambura",
-      position: "Vice President",
+      position: "Vice Chair",
       institution: "Laikipia University",
       course: "Economics and Statistics",
       year: "3rd Year",
@@ -41,25 +41,7 @@ const LeadershipPage = () => {
     },
     {
       id: 3,
-      name: "Grace Nyambura Kariuki",
-      position: "Secretary General",
-      institution: "University of Nairobi",
-      course: "Medicine",
-      year: "5th Year",
-      bio: "Medical student with a heart for community health and education. Passionate about improving healthcare access in rural areas.",
-      vision: "Ensuring transparent communication and efficient coordination of all association activities and programs.",
-      email: "secretary@nctsa.org",
-      phone: "+254 734 567 890",
-      image: "/chairs panel.jpg",
-      achievements: ["Medical Student Association President", "Community Health Champion", "Research Excellence Award"],
-      social: {
-        linkedin: "https://linkedin.com/in/grace-nyambura",
-        twitter: "https://twitter.com/grace_nyambura"
-      }
-    },
-    {
-      id: 4,
-      name: "Peter Mwangi Githinji",
+      name: "Grace Maina",
       position: "Treasurer",
       institution: "Strathmore University",
       course: "Finance",
@@ -71,8 +53,26 @@ const LeadershipPage = () => {
       image: "/Tressurer.jpg",
       achievements: ["CPA Finalist", "Finance Club President", "Scholarship Recipient"],
       social: {
-        linkedin: "https://linkedin.com/in/peter-mwangi",
-        twitter: "https://twitter.com/peter_mwangi"
+        linkedin: "https://linkedin.com/in/grace-maina",
+        twitter: "https://twitter.com/grace_maina"
+      }
+    },
+    {
+      id: 4,
+      name: "Robert Kamau",
+      position: "Chair's Panel",
+      institution: "University of Nairobi",
+      course: "Medicine",
+      year: "5th Year",
+      bio: "Medical student with a heart for community health and education. Passionate about improving healthcare access in rural areas.",
+      vision: "Ensuring transparent communication and efficient coordination of all association activities and programs.",
+      email: "panel@nctsa.org",
+      phone: "+254 734 567 890",
+      image: "/chairs panel.jpg",
+      achievements: ["Medical Student Association President", "Community Health Champion", "Research Excellence Award"],
+      social: {
+        linkedin: "https://linkedin.com/in/robert-kamau",
+        twitter: "https://twitter.com/robert_kamau"
       }
     }
   ];
@@ -80,18 +80,7 @@ const LeadershipPage = () => {
   const departmentHeads = [
     {
       id: 5,
-      name: "Advocate Sarah Wanjiku",
-      position: "Legal Affairs Director",
-      institution: "University of Nairobi",
-      course: "Law",
-      year: "Advocate of the High Court",
-      bio: "Qualified advocate of the High Court of Kenya, providing legal guidance and ensuring compliance with regulations.",
-      email: "legal@nctsa.org",
-      image: "/advocate.jpg"
-    },
-    {
-      id: 6,
-      name: "Grace Muthoni",
+      name: "Alice Warigia Mwangi",
       position: "Persons with Disability Representative",
       institution: "Kenyatta University",
       course: "Special Needs Education",
@@ -99,6 +88,17 @@ const LeadershipPage = () => {
       bio: "Passionate advocate for inclusive education and accessibility, ensuring all students have equal opportunities.",
       email: "pwd@nctsa.org",
       image: "/PwD rep.jpg"
+    },
+    {
+      id: 6,
+      name: "Sheila Wanjiku Karue",
+      position: "Advocate of the High Court of Kenya",
+      institution: "University of Nairobi",
+      course: "Law",
+      year: "Advocate",
+      bio: "Qualified advocate of the High Court of Kenya, providing legal guidance and ensuring compliance with regulations.",
+      email: "legal@nctsa.org",
+      image: "/advocate.jpg"
     },
     {
       id: 7,
