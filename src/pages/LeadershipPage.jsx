@@ -80,25 +80,25 @@ const LeadershipPage = () => {
   const departmentHeads = [
     {
       id: 5,
-      name: "Mary Wambui Thuo",
-      position: "Academic Affairs Director",
-      institution: "Kenyatta University",
-      course: "Education",
-      year: "3rd Year",
-      bio: "Dedicated to improving educational outcomes and academic support systems for all students.",
-      email: "academics@nctsa.org",
-      image: "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      name: "Advocate Sarah Wanjiku",
+      position: "Legal Affairs Director",
+      institution: "University of Nairobi",
+      course: "Law",
+      year: "Advocate of the High Court",
+      bio: "Qualified advocate of the High Court of Kenya, providing legal guidance and ensuring compliance with regulations.",
+      email: "legal@nctsa.org",
+      image: "/advocate.jpg"
     },
     {
       id: 6,
-      name: "David Kiprotich Maina",
-      position: "Sports & Recreation Director",
-      institution: "Moi University",
-      course: "Sports Science",
-      year: "2nd Year",
-      bio: "Former county athlete promoting sports excellence and recreational activities among students.",
-      email: "sports@nctsa.org",
-      image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+      name: "Grace Muthoni",
+      position: "Persons with Disability Representative",
+      institution: "Kenyatta University",
+      course: "Special Needs Education",
+      year: "3rd Year",
+      bio: "Passionate advocate for inclusive education and accessibility, ensuring all students have equal opportunities.",
+      email: "pwd@nctsa.org",
+      image: "/PwD rep.jpg"
     },
     {
       id: 7,
