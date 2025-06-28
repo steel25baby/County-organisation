@@ -7,15 +7,18 @@ const LeadershipPage = () => {
       id: 1,
       name: "Geoffrey Ngache",
       position: "President",
+      institution: "Laikipia University",
+      course: "Computer Science",
+      year: "4th Year",
       bio: "Passionate about technology and youth empowerment. Leading initiatives to bridge the digital divide in Nyandarua County.",
       vision: "To create a platform where every tertiary student from Nyandarua can access opportunities regardless of their background.",
       email: "ngachageoffrey@gmail.com",
       phone: "+254 702381981",
-      image: "https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/president.jpg",
       achievements: ["Dean's List 2022-2023", "Google Developer Student Club Lead", "Published researcher"],
       social: {
-        linkedin: "https://linkedin.com/in/sarah-wanjiku",
-        twitter: "https://twitter.com/sarah_wanjiku"
+        linkedin: "https://linkedin.com/in/geoffrey-ngache",
+        twitter: "https://twitter.com/geoffrey_ngache"
       }
     },
     {
@@ -23,17 +26,17 @@ const LeadershipPage = () => {
       name: "Margaret Nyambura",
       position: "Vice President",
       institution: "Laikipia University",
-      course: "Economics and statistics",
+      course: "Economics and Statistics",
       year: "3rd Year",
       bio: "Entrepreneur and business strategist with a passion for community development and sustainable growth.",
       vision: "Building partnerships that create lasting impact for current and future generations of Nyandarua students.",
       email: "vp@nctsa.org",
       phone: "+254 723 456 789",
-      image: "https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/vice chair .jpg",
       achievements: ["Young Entrepreneur Award 2023", "Business Plan Competition Winner", "Volunteer of the Year"],
       social: {
-        linkedin: "https://linkedin.com/in/john-kamau",
-        twitter: "https://twitter.com/john_kamau"
+        linkedin: "https://linkedin.com/in/margaret-nyambura",
+        twitter: "https://twitter.com/margaret_nyambura"
       }
     },
     {
@@ -47,7 +50,7 @@ const LeadershipPage = () => {
       vision: "Ensuring transparent communication and efficient coordination of all association activities and programs.",
       email: "secretary@nctsa.org",
       phone: "+254 734 567 890",
-      image: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/chairs panel.jpg",
       achievements: ["Medical Student Association President", "Community Health Champion", "Research Excellence Award"],
       social: {
         linkedin: "https://linkedin.com/in/grace-nyambura",
@@ -65,7 +68,7 @@ const LeadershipPage = () => {
       vision: "Ensuring responsible financial management and creating sustainable funding for student programs and initiatives.",
       email: "treasurer@nctsa.org",
       phone: "+254 745 678 901",
-      image: "https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/Tressurer.jpg",
       achievements: ["CPA Finalist", "Finance Club President", "Scholarship Recipient"],
       social: {
         linkedin: "https://linkedin.com/in/peter-mwangi",
