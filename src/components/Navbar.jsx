@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun, GraduationCap, LogIn, UserPlus, User, LogOut } from 'lucide-react';
+import { Menu, X, Moon, Sun, LogIn, UserPlus, User, LogOut } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -41,8 +41,12 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-2">
-                <GraduationCap className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+              <Link to="/" className="flex items-center space-x-3">
+                <img 
+                  src="/nyandarua_page1.jpg" 
+                  alt="NCTSA Logo" 
+                  className="h-10 w-10 object-contain"
+                />
                 <div className="flex flex-col">
                   <span className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
                     NCTSA

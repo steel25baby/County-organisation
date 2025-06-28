@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { User, Mail, Lock, Eye, EyeOff, GraduationCap, BookOpen, Car as IdCard, UserPlus } from 'lucide-react';
+import { User, Mail, Lock, Eye, EyeOff, BookOpen, Car as IdCard, UserPlus } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const SignupPage = () => {
@@ -119,7 +119,11 @@ const SignupPage = () => {
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full">
-              <GraduationCap className="h-12 w-12 text-blue-600 dark:text-blue-400" />
+              <img 
+                src="/nyandarua_page1.jpg" 
+                alt="NCTSA Logo" 
+                className="h-16 w-16 object-contain"
+              />
             </div>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
@@ -274,7 +278,11 @@ const SignupPage = () => {
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <GraduationCap className="h-5 w-5 text-gray-400" />
+                  <img 
+                    src="/nyandarua_page1.jpg" 
+                    alt="Institution" 
+                    className="h-5 w-5 object-contain opacity-40"
+                  />
                 </div>
                 <select
                   id="institution"

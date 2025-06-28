@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, GraduationCap } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,8 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <GraduationCap className="h-8 w-8 text-blue-400" />
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/nyandarua_page1.jpg" 
+                alt="NCTSA Logo" 
+                className="h-12 w-12 object-contain"
+              />
               <div className="flex flex-col">
                 <span className="text-xl font-bold">NCTSA</span>
                 <span className="text-sm text-gray-300">Nyandarua County</span>

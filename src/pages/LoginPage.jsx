@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Mail, Lock, Eye, EyeOff, LogIn, GraduationCap } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, LogIn } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 const LoginPage = () => {
@@ -80,7 +80,11 @@ const LoginPage = () => {
         <div className="text-center">
           <div className="flex justify-center mb-6">
             <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full">
-              <GraduationCap className="h-12 w-12 text-blue-600 dark:text-blue-400" />
+              <img 
+                src="/nyandarua_page1.jpg" 
+                alt="NCTSA Logo" 
+                className="h-16 w-16 object-contain"
+              />
             </div>
           </div>
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
