@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { supabase, getCurrentUser } from '../lib/supabase';
 
 const AuthContext = createContext(undefined);
 
@@ -15,73 +16,96 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check if user is logged in from localStorage
-    const savedUser = localStorage.getItem('nctsa_user');
-    if (savedUser) {
+    // Check current session and subscribe to auth changes
+    const initAuth = async () => {
       try {
-        setUser(JSON.parse(savedUser));
+        const currentUser = await getCurrentUser();
+        setUser(currentUser);
+
+        // Subscribe to auth changes
+        const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+          if (event === 'SIGNED_IN' || event === 'USER_UPDATED') {
+            const user = await getCurrentUser();
+            setUser(user);
+          } else if (event === 'SIGNED_OUT') {
+            setUser(null);
+          }
+        });
+
+        return () => {
+          subscription?.unsubscribe();
+        };
       } catch (error) {
-        console.error('Error parsing saved user:', error);
-        localStorage.removeItem('nctsa_user');
+        console.error('Error initializing auth:', error);
+      } finally {
+        setIsLoading(false);
       }
-    }
-    setIsLoading(false);
+    };
+
+    initAuth();
   }, []);
 
   const login = async (email, password) => {
     setIsLoading(true);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For demo purposes, accept any email/password combination
-      // In a real app, this would make an API call to your backend
-      const userData = {
-        id: Date.now(),
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
-        name: email.split('@')[0], // Use email prefix as name for demo
-        institution: 'Demo University',
-        course: 'Demo Course',
-        studentId: 'DEMO123',
-        joinedAt: new Date().toISOString()
-      };
+        password,
+      });
 
-      setUser(userData);
-      localStorage.setItem('nctsa_user', JSON.stringify(userData));
-      setIsLoading(false);
+      if (error) throw error;
+
+      const user = await getCurrentUser();
+      setUser(user);
       return { success: true };
     } catch (error) {
+      console.error('Login error:', error);
+      return { 
+        success: false, 
+        error: error.message || 'Login failed. Please try again.' 
+      };
+    } finally {
       setIsLoading(false);
-      return { success: false, error: 'Login failed. Please try again.' };
     }
   };
 
   const signup = async (userData) => {
     setIsLoading(true);
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // For demo purposes, accept any signup data
-      // In a real app, this would make an API call to your backend
-      const newUser = {
-        id: Date.now(),
-        ...userData,
-        joinedAt: new Date().toISOString()
-      };
+      // Register user with Supabase Auth
+      const { data: authData, error: authError } = await supabase.auth.signUp({
+        email: userData.email,
+        password: userData.password,
+        options: {
+          data: {
+            full_name: userData.fullName,
+          },
+        },
+      });
 
-      // Don't auto-login after signup, redirect to login page
-      setIsLoading(false);
+      if (authError) throw authError;
+
+      // Profile is automatically created by the database trigger
       return { success: true };
     } catch (error) {
+      console.error('Signup error:', error);
+      return { 
+        success: false, 
+        error: error.message || 'Signup failed. Please try again.' 
+      };
+    } finally {
       setIsLoading(false);
-      return { success: false, error: 'Signup failed. Please try again.' };
     }
   };
 
-  const logout = () => {
+  const logout = async () => {
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
     setUser(null);
-    localStorage.removeItem('nctsa_user');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
   };
 
   const value = {
@@ -90,7 +114,8 @@ export const AuthProvider = ({ children }) => {
     login,
     signup,
     logout,
-    isAuthenticated: !!user
+    isAuthenticated: !!user,
+    isAdmin: user?.role === 'admin'
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Eye, EyeOff, BookOpen, Car as IdCard, UserPlus } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
@@ -18,8 +18,15 @@ const SignupPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const { signup } = useAuth();
+  const { signup, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/', { replace: true });
+    }
+  }, [isAuthenticated, navigate]);
 
   const institutions = [
     'University of Nairobi',
@@ -75,6 +82,10 @@ const SignupPage = () => {
       newErrors.confirmPassword = 'Passwords do not match';
     }
 
+    if (!formData.institution) {
+      newErrors.institution = 'Please select your institution';
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -90,9 +101,9 @@ const SignupPage = () => {
     
     try {
       const result = await signup({
-        name: formData.fullName,
         email: formData.email,
         password: formData.password,
+        fullName: formData.fullName,
         institution: formData.institution,
         course: formData.course,
         studentId: formData.studentId
@@ -100,10 +111,10 @@ const SignupPage = () => {
       
       if (result.success) {
         // Show success message and redirect to login
-        alert('Account created successfully! Please login with your credentials.');
+        alert('Account created successfully! Please check your email to verify your account before logging in.');
         navigate('/login');
       } else {
-        setErrors({ submit: result.error || 'Signup failed. Please try again.' });
+        setErrors({ submit: result.error });
       }
     } catch (error) {
       setErrors({ submit: 'An unexpected error occurred. Please try again.' });
@@ -274,31 +285,27 @@ const SignupPage = () => {
             {/* Institution Field */}
             <div>
               <label htmlFor="institution" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Institution
+                Institution *
               </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <img 
-                    src="/nyandarua_page1.jpg" 
-                    alt="Institution" 
-                    className="h-5 w-5 object-contain opacity-40"
-                  />
-                </div>
                 <select
                   id="institution"
                   name="institution"
                   value={formData.institution}
                   onChange={handleInputChange}
-                  className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                className={`block w-full pl-3 pr-10 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors duration-200 ${
+                  errors.institution 
+                    ? 'border-red-300 dark:border-red-600' 
+                    : 'border-gray-300 dark:border-gray-600'
+                }`}
                 >
                   <option value="">Select your institution</option>
-                  {institutions.map((institution) => (
-                    <option key={institution} value={institution}>
-                      {institution}
-                    </option>
+                {institutions.map((inst) => (
+                  <option key={inst} value={inst}>{inst}</option>
                   ))}
                 </select>
-              </div>
+              {errors.institution && (
+                <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.institution}</p>
+              )}
             </div>
 
             {/* Course Field */}
@@ -381,13 +388,6 @@ const SignupPage = () => {
             >
               Sign in here
             </Link>
-          </p>
-        </div>
-
-        {/* Demo Notice */}
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-          <p className="text-sm text-blue-700 dark:text-blue-300 text-center">
-            <strong>Demo Mode:</strong> Fill out the form to create a demo account
           </p>
         </div>
       </div>

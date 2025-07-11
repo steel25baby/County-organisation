@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, LogIn } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -12,8 +12,17 @@ const LoginPage = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const { login } = useAuth();
+  const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Redirect if already authenticated
+  useEffect(() => {
+    if (isAuthenticated) {
+      const from = location.state?.from?.pathname || '/';
+      navigate(from, { replace: true });
+    }
+  }, [isAuthenticated, navigate, location]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -41,8 +50,6 @@ const LoginPage = () => {
 
     if (!formData.password) {
       newErrors.password = 'Password is required';
-    } else if (formData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
     }
 
     setErrors(newErrors);
@@ -62,9 +69,11 @@ const LoginPage = () => {
       const result = await login(formData.email, formData.password);
       
       if (result.success) {
-        navigate('/');
+        // Navigate to the page they were trying to access, or home
+        const from = location.state?.from?.pathname || '/';
+        navigate(from, { replace: true });
       } else {
-        setErrors({ submit: result.error || 'Login failed. Please try again.' });
+        setErrors({ submit: result.error });
       }
     } catch (error) {
       setErrors({ submit: 'An unexpected error occurred. Please try again.' });
@@ -186,7 +195,7 @@ const LoginPage = () => {
               ) : (
                 <>
                   <LogIn className="h-5 w-5 mr-2" />
-                  Login
+                  Sign In
                 </>
               )}
             </button>
@@ -213,13 +222,6 @@ const LoginPage = () => {
             >
               Sign up here
             </Link>
-          </p>
-        </div>
-
-        {/* Demo Notice */}
-        <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-          <p className="text-sm text-blue-700 dark:text-blue-300 text-center">
-            <strong>Demo Mode:</strong> Use any email and password to login
           </p>
         </div>
       </div>

@@ -24,9 +24,10 @@ const Navbar = () => {
 
   const isActive = (path) => location.pathname === path;
 
-  const handleLogout = () => {
-    logout();
+  const handleLogout = async () => {
+    await logout();
     setShowUserMenu(false);
+    setIsOpen(false);
   };
 
   return (
@@ -83,15 +84,23 @@ const Navbar = () => {
                       className="flex items-center space-x-2 p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                     >
                       <User className="h-5 w-5" />
-                      <span className="text-sm font-medium">{user?.name || 'User'}</span>
+                      <span className="text-sm font-medium">{user?.full_name || 'User'}</span>
                     </button>
                     
                     {showUserMenu && (
                       <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50">
                         <div className="px-4 py-2 text-sm text-gray-700 dark:text-gray-300 border-b border-gray-200 dark:border-gray-700">
-                          <p className="font-medium">{user?.name}</p>
+                          <p className="font-medium">{user?.full_name}</p>
                           <p className="text-xs text-gray-500 dark:text-gray-400">{user?.email}</p>
                         </div>
+                        <Link
+                          to={user?.role === 'admin' ? '/admin' : '/dashboard'}
+                          onClick={() => setShowUserMenu(false)}
+                          className="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
+                        >
+                          <User className="h-4 w-4 mr-2" />
+                          Dashboard
+                        </Link>
                         <button
                           onClick={handleLogout}
                           className="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
@@ -150,7 +159,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-800 border-t dark:border-gray-700">
+          <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
@@ -172,9 +181,17 @@ const Navbar = () => {
                 {isAuthenticated ? (
                   <div className="space-y-1">
                     <div className="px-3 py-2 text-sm text-gray-700 dark:text-gray-300">
-                      <p className="font-medium">{user?.name}</p>
+                      <p className="font-medium">{user?.full_name}</p>
                       <p className="text-xs text-gray-500 dark:text-gray-400">{user?.email}</p>
                     </div>
+                    <Link
+                      to={user?.role === 'admin' ? '/admin' : '/dashboard'}
+                      onClick={() => setIsOpen(false)}
+                      className="flex items-center w-full px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700"
+                    >
+                      <User className="h-5 w-5 mr-2" />
+                      Dashboard
+                    </Link>
                     <button
                       onClick={handleLogout}
                       className="flex items-center w-full px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700"
